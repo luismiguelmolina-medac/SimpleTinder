@@ -1,0 +1,59 @@
+.matches {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columnas */
+    gap: 15px;
+    padding: 10px;
+}
+
+.matches>div {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    /* bordes redondeados del contenedor */
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+/* Imagen cuadrada y pequeña */
+.matches img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    /* asegura forma cuadrada */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Nombre dentro de la imagen abajo */
+.matches span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    font-size: .9rem;
+    font-weight: 600;
+    background: rgba(0, 0, 0, .4);
+    color: #fff;
+}
+
+/* Hover con tu color (#fe3865) */
+.matches>div:hover img {
+    filter: brightness(.6);
+}
+
+.matches>div:hover span {
+    background-color: #fe3865;
+}
+
+.matches .heart {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #fe3865;
+    font-size: 2rem;
+    z-index: 2;
+    pointer-events: none;
+    margin: 0;
+}

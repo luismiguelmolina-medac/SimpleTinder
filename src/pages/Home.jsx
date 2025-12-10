@@ -11,6 +11,7 @@ function Home({ profile }) {
     <>
       <Usuario user={profile} />
       <Routes>
+        <Route path='/' element={<Matches />} />
         <Route path='/matches' element={<Matches />} />
         <Route path='/mensajes' element={<Mensajes />} />
       </Routes>

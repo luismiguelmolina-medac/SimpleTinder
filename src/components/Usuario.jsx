@@ -3,7 +3,7 @@ import './usuario.css'
 import { Link } from 'react-router-dom'
 
 function Usuario({ user }) {
-
+  const [active, setActive] = useState(1);
 
   return (
     <>
@@ -12,8 +12,8 @@ function Usuario({ user }) {
         <p>{user.nombre} - {user.edad}</p>
       </div>
       <div className='nav_profile'>
-        <Link to="/matches" className='active'>Matches</Link>
-        <Link to="/mensajes">Mensajes</Link>
+        <Link to="/matches" className={active == 1 ? "active" : ""} onClick={() => setActive(1)}>Matches</Link>
+        <Link to="/mensajes" className={active == 2 ? "active" : ""} onClick={() => setActive(2)}>Mensajes</Link>
       </div>
     </>
   )
