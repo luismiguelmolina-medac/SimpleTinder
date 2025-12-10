@@ -1,0 +1,55 @@
+.user_profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fe3865;
+    /* color solicitado */
+    padding: 12px;
+    border-radius: 8px;
+    color: #fff;
+    /* para mejor contraste */
+}
+
+.user_profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.user_profile p {
+    font-size: 1.6rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* NAV inferior */
+.nav_profile {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 8px;
+}
+
+.nav_profile a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    padding-bottom: 4px;
+    transition: 0.2s;
+}
+
+/* Hover */
+.nav_profile a:hover {
+    color: #fe3865;
+}
+
+/* Activo */
+.nav_profile .active {
+    color: #fe3865;
+    border-bottom: 3px solid #fe3865;
+    /* línea inferior activa */
+    font-weight: 600;
+}

@@ -5,7 +5,7 @@ function Mensajes() {
 
   return (
     <>
-      
+      <p>Mensajes</p>
     </>
   )
 }

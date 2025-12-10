@@ -10,7 +10,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path='/' element={<Home profile={user_profile} />} />
+      <Route path='/*' element={<Home profile={user_profile} />} />
     </Routes>
   )
 }
