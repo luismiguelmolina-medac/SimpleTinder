@@ -1,0 +1,47 @@
+.chat_container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    /* altura fija del chat */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.chat_messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    /* scroll si hay muchos mensajes */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #f9f9f9;
+}
+
+.chat_messages p {
+    max-width: 70%;
+    padding: 8px 12px;
+    background-color: #fe3865;
+    /* burbuja de mensaje */
+    color: white;
+    border-radius: 16px;
+    align-self: flex-start;
+    /* por defecto los mensajes van a la izquierda */
+    margin: 0;
+}
+
+.chat_input {
+    border-top: 1px solid #ccc;
+    padding: 8px;
+}
+
+.chat_input input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+    box-sizing: border-box;
+}

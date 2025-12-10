@@ -9,12 +9,14 @@ function Home({ profile }) {
 
   return (
     <>
-      <Usuario user={profile} />
-      <Routes>
-        <Route path='/' element={<Matches />} />
-        <Route path='/matches' element={<Matches />} />
-        <Route path='/mensajes' element={<Mensajes />} />
-      </Routes>
+      <div className='leftContent'>
+        <Usuario user={profile} />
+        <Routes>
+          <Route path='/' element={<Matches />} />
+          <Route path='/matches' element={<Matches />} />
+          <Route path='/mensajes' element={<Mensajes />} />
+        </Routes>
+      </div>
     </>
   )
 }
