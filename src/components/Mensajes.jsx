@@ -1,14 +1,32 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './mensajes.css'
+import { animate } from 'animejs';
 
 function Mensajes() {
   const [mensajes, setMensajes] = useState([]);
+  const lastMsgRef = useRef(null);
+
+  useEffect(() => {
+    if (!(lastMsgRef.current instanceof HTMLElement)) return;
+    animate(lastMsgRef.current, {
+      translateY: [20, 0],
+      opacity: [0, 1],
+      duration: 400,
+      ease: 'out(3)'
+    });
+  }, [mensajes]);
+
   return (
     <>
       <div className="chat_container">
         <div className="chat_messages">
-          {mensajes.map(m => (
-            <p>{m}</p>
+          {mensajes.map((m, i) => (
+            <p
+              key={i}
+              ref={i == mensajes.length - 1 ? lastMsgRef : null}
+            >
+              {m}
+            </p>
           ))}
         </div>
         <div className="chat_input">
