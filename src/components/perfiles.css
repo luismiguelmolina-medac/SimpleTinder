@@ -20,18 +20,6 @@
   overflow: hidden;
 }
 
-.tarjeta::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.75),
-    rgba(0, 0, 0, 0.1) 60%,
-    transparent
-  );
-}
-
 .tarjeta h3,
 .tarjeta p {
   position: relative;
